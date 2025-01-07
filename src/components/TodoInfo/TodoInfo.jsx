@@ -1,7 +1,6 @@
 import {UserInfo}  from '../UserInfo'
 import cn from 'classnames'
 export const TodoInfo = ({todoElementInfo}) => {
-  console.log("Test" , todoElementInfo)
   const { completed , title , user } = todoElementInfo
   return (
   <article className={

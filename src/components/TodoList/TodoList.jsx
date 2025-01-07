@@ -1,6 +1,5 @@
 import { TodoInfo } from '../TodoInfo';
 export const TodoList = ({todoElements}) => {
-  console.log(todoElements)
   return (
     <section className="TodoList">
       {todoElements.map(todoElement => (
