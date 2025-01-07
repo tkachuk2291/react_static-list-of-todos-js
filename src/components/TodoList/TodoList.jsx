@@ -1,10 +1,10 @@
 import { TodoInfo } from '../TodoInfo';
-export const TodoList = ({TodoElements}) => {
-  console.log(TodoElements)
+export const TodoList = ({todoElements}) => {
+  console.log(todoElements)
   return (
     <section className="TodoList">
-      {TodoElements.map(TodoElement => (
-       <TodoInfo TodoElementInfo={TodoElement} key={TodoElement.id} />
+      {todoElements.map(todoElement => (
+       <TodoInfo todoElementInfo={todoElement} key={todoElement.id} />
       ))}
     </section>
   )}

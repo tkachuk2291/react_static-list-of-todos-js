@@ -1,10 +1,17 @@
 import {UserInfo}  from '../UserInfo'
-export const TodoInfo = ({TodoElementInfo}) => {
-  const { id , completed , title , user } = TodoElementInfo
+import cn from 'classnames'
+export const TodoInfo = ({todoElementInfo}) => {
+  console.log("Test" , todoElementInfo)
+  const { completed , title , user } = todoElementInfo
   return (
-  <article className={`TodoInfo ${completed ? 'TodoInfo--completed' : ''}`} key={id}>
+  <article className={
+    cn('TodoInfo', {
+      'TodoInfo--completed': completed,
+    })
+  }>
     <h2 className="TodoInfo__title">{title}</h2>
-    {user ? <UserInfo user={user} /> : ''}
+    {user && <UserInfo user={user} /> }
 
   </article>
 )}
+
